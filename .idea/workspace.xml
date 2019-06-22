@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a773aed-6de9-41bd-811d-3a27b43554b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Selenium.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/apidocs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebScraping.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/WebScraping/META-INF/WebScraping.kotlin_module" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/WebScraping/com/company/Main.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/WebScraping/main/java/com/company/GlobalVariable.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/WebScraping/main/java/com/company/Scrapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/GlobalVariable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/Scrapper.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -38,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="54" column="35" lean-forward="true" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+            <state relative-caret-position="1296">
+              <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/GlobalVariable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="6" column="56" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="56" />
+              <caret line="6" column="56" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -242,6 +230,14 @@
       <option name="presentableId" value="Default" />
       <updated>1560431150787</updated>
     </task>
+    <task id="LOCAL-00001" summary="first">
+      <created>1561228166815</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1561228166816</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -271,9 +267,9 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="GraphQL" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3293348" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3293348" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.3293348" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3293348" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -286,6 +282,10 @@
       <window_info anchor="right" id="Key Promoter X" order="8" />
       <window_info anchor="right" id="TODO" order="9" side_tool="true" visible="true" weight="0.17217484" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first" />
+    <option name="LAST_COMMIT_MESSAGE" value="first" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.json5" />
@@ -325,7 +325,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/GlobalVariable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="6" column="56" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="56" />
+          <caret line="6" column="56" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -334,8 +334,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="54" column="35" lean-forward="true" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+        <state relative-caret-position="1296">
+          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
