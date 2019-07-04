@@ -6,20 +6,11 @@ import java.io.IOException;
 
 
 
-    public class GetExample {
+    public class PostExample {
         public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
 
         OkHttpClient client = new OkHttpClient();
 
-        public String run(String url) throws IOException {
-            Request request = new Request.Builder()
-                    .url(url)
-                    .build();
-
-            try (Response response = client.newCall(request).execute()) {
-                return response.body().string();
-            }
-        }
         String post(String url, String json) throws IOException {
             RequestBody body = RequestBody.create(JSON, json);
             Request request = new Request.Builder()
@@ -30,7 +21,6 @@ import java.io.IOException;
                 return response.body().string();
             }
         }
-        String msgToBot(String )
 
 
 

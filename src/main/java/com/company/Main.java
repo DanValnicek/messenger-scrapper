@@ -1,12 +1,10 @@
 package com.company;
 
-import main.java.com.company.GetExample;
 import main.java.com.company.GlobalVariable;
 import main.java.com.company.Scrapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class Main extends Scrapper {
@@ -15,14 +13,7 @@ public class Main extends Scrapper {
         String messPass = System.getenv("messPass");
         System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver.exe");
         JavascriptExecutor js = (JavascriptExecutor) GlobalVariable.driver;
-        GetExample example = new GetExample();
-        String response = null;
-        try {
-            response = example.run("https://tea-bot.eu-gb.mybluemix.net/");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(response);
+
 //        DesiredCapabilities cap = DesiredCapabilities.htmlUnit();
 //        cap.setJavascriptEnabled(true);
         GlobalVariable.driver.manage().window().maximize();

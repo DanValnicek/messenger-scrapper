@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a773aed-6de9-41bd-811d-3a27b43554b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/java.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/GetExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/ParameterStringBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/Socket/io.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Selenium.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/apidocs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraping.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WebScraping/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebScraping/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WebScraping/main/java/com/company/Scrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebScraping/main/java/com/company/Scrapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/GlobalVariable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/GlobalVariable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/GetExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/PostExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Scrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Scrapper.java" afterDir="false" />
     </list>
@@ -40,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="216">
+              <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/company/GetExample.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PostExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+            <state relative-caret-position="288">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Scrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1216">
-              <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+            <state relative-caret-position="-384">
+              <caret line="41" column="74" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,9 +122,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/company/GlobalVariable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/ParameterStringBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/Connect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/company/Scrapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/GetExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/company/PostExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/company/Scrapper.java" />
       </list>
     </option>
   </component>
@@ -230,7 +222,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="D:/Socket.io/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -300,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561228255467</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="second">
+      <created>1562249305339</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562249305339</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -314,7 +313,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11940298" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -326,7 +324,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.38822246" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.38822246" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31842965" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -360,7 +358,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/company/Scrapper.java</url>
-          <line>13</line>
+          <line>14</line>
           <properties class="main.java.com.company.Scrapper" method="lastMessage">
             <option name="EMULATED" value="true" />
           </properties>
@@ -368,15 +366,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/company/Scrapper.java</url>
-          <line>59</line>
+          <line>81</line>
           <properties />
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/company/Main.java</url>
-          <line>19</line>
-          <properties />
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -386,7 +378,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/WebScraping$Main.ic" NAME="Main Coverage Results" MODIFIED="1561393840554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/WebScraping$Main.ic" NAME="Main Coverage Results" MODIFIED="1562256515278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -519,13 +511,6 @@
         <state relative-caret-position="-30" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/ParameterStringBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/GlobalVariable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -536,30 +521,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Scrapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/ParameterStringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+        <state relative-caret-position="408">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PostExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/WebScraping/com/company/Main.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="216">
+          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/GetExample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Scrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+        <state relative-caret-position="-384">
+          <caret line="41" column="74" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
