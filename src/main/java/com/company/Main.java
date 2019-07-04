@@ -4,6 +4,7 @@ import main.java.com.company.GlobalVariable;
 import main.java.com.company.Scrapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,6 +12,7 @@ public class Main extends Scrapper {
     public static void main(String[] args) {
 //        String eduPass = System.getenv("EduPass");
         String messPass = System.getenv("messPass");
+
         System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver.exe");
         JavascriptExecutor js = (JavascriptExecutor) GlobalVariable.driver;
 
@@ -62,15 +64,15 @@ public class Main extends Scrapper {
                 Scrapper.lastMessage();
 
                 js.executeScript("newMessage = false;");
-            } else
+            } else {
                 System.out.println("nothing happens");
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException ex) {
-                // Stop immediately and go home
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException ex) {
+                    // Stop immediately and go home
+                }
             }
         }
-
 
 //        }
 
