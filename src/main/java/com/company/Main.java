@@ -4,47 +4,37 @@ import main.java.com.company.GlobalVariable;
 import main.java.com.company.Scrapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.TimeUnit;
 
 public class Main extends Scrapper {
     public static void main(String[] args) {
-//        String eduPass = System.getenv("EduPass");
         String messPass = System.getenv("messPass");
-
+//      system path to chromedriver
         System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver.exe");
+
         JavascriptExecutor js = (JavascriptExecutor) GlobalVariable.driver;
-
-//        DesiredCapabilities cap = DesiredCapabilities.htmlUnit();
-//        cap.setJavascriptEnabled(true);
-        GlobalVariable.driver.manage().window().maximize();
+//      deleting cookies
         GlobalVariable.driver.manage().deleteAllCookies();
-
+//      setting timeouts
         GlobalVariable.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         GlobalVariable.driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-
+//      finding URL
         GlobalVariable.driver.get("https://www.messenger.com/");
 
         System.out.println("title of the page is: " + GlobalVariable.driver.getCurrentUrl());
 
 //        System.out.println(js.executeScript("return document.documentElement.outerHTML"));
 
-//        GlobalVariable.usernameWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"email\"]")));
-//        GlobalVariable.driver.findElement(By.xpath("//*[@id=\"u_0_6\"]/div/button")).click();
+//        logging to messenger
         GlobalVariable.driver.findElement(By.id("email")).sendKeys("danvalnicek@gmail.com");
         GlobalVariable.driver.findElement(By.id("pass")).sendKeys(messPass);
         GlobalVariable.driver.findElement(By.id("loginbutton")).click();
-//        finding channel
-//        GlobalVariable.driver.findElement(By.xpath("//*[@id=\"row_header_id_thread:2124606510942985\"]/a/div/div[2]")).click();
+//        accessing channel
         GlobalVariable.driver.findElement(By.xpath("//*[@id=\"row_header_id_thread:2352986854724121\"]/a/div/div[2]")).click();
-//        TODO: live reload
-
-        Boolean True = true;
-
 //        js event listener
-        js.executeScript("console.log('start')");
-        System.out.println("start");
+        js.executeScript("console.log('trying to implement event listener to page')");
+        System.out.println("trying to implement event listener to page");
         boolean ready = false;
         while (!ready) {
             try {
@@ -55,8 +45,11 @@ public class Main extends Scrapper {
                 ready = false;
             }
         }
-        System.out.println("1");
-        js.executeScript("console.log('1')");
+        System.out.println("event listener is implemented");
+        js.executeScript("console.log('event listener is implemented')");
+
+//        Live reload
+        Boolean True = true;
         while (True) {
             Object newM = js.executeScript("return newMessage");
             boolean val = Boolean.parseBoolean(String.valueOf(newM));
@@ -69,39 +62,10 @@ public class Main extends Scrapper {
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException ex) {
-                    // Stop immediately and go home
+                    System.out.println("Stop immediately and go home");
                 }
             }
         }
-
-//        }
-
-        //        finding name
-
-//        TODO: scanning more msg from one user
-
-        //        finding message
-
-
-//        URL imgURL = new URL(imgSrc);
-//        System.out.println(imgURL);
-
-
-//        GlobalVariable.driver.findElement(By.name("username")).sendKeys("DanValnicek");
-//        GlobalVariable.driver.findElement(By.name("password")).sendKeys(eduPass);
-//        GlobalVariable.driver.findElement(By.);
-//        GlobalVariable.driver.findElement(By.xpath("//input[@value='Prihlásiť sa']")).click();
-//        try{
-//            GlobalVariable.driver.findElement(By.xpath("//*[@id=\"docbody\"]/div[2]/div[1]/button")).click();
-//        }catch (Exception e){
-//            System.out.println("No X");
-//        }
-
-
-//        GlobalVariable.driver.findElement(By.xpath("//input[@autocomplete='off']")).sendKeys("Nela");
-//        GlobalVariable.driver.findElement(By.xpath("//input[text()='Nela Valnickova']")).click();
-//        GlobalVariable.driver.findElement(By.xpath("//*[@id=\"js_1\"]/div[13]/div/div[2]/h5")).getAttribute("innerHTML");
     }
-
 }
 //          TODO: easter egg
