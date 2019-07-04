@@ -1,66 +1,85 @@
 package com.company;
 
+import main.java.com.company.GetExample;
 import main.java.com.company.GlobalVariable;
 import main.java.com.company.Scrapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 
-import java.util.List;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class Main extends Scrapper {
     public static void main(String[] args) {
 //        String eduPass = System.getenv("EduPass");
         String messPass = System.getenv("messPass");
-
         System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver.exe");
-
+        JavascriptExecutor js = (JavascriptExecutor) GlobalVariable.driver;
+        GetExample example = new GetExample();
+        String response = null;
+        try {
+            response = example.run("https://tea-bot.eu-gb.mybluemix.net/");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(response);
+//        DesiredCapabilities cap = DesiredCapabilities.htmlUnit();
+//        cap.setJavascriptEnabled(true);
         GlobalVariable.driver.manage().window().maximize();
         GlobalVariable.driver.manage().deleteAllCookies();
 
-        GlobalVariable.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-        GlobalVariable.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-//        GlobalVariable.driver.get("https://spseadlerka.edupage.org/login/index.php?out=1");
-        GlobalVariable.driver.get("https://www.messenger.com/");
+        GlobalVariable.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+        GlobalVariable.driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
+        GlobalVariable.driver.get("https://www.messenger.com/");
 
         System.out.println("title of the page is: " + GlobalVariable.driver.getCurrentUrl());
 
-        GlobalVariable.driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("danvalnicek@gmail.com");
-        GlobalVariable.driver.findElement(By.xpath("//*[@id=\"pass\"]")).sendKeys(messPass);
-        GlobalVariable.driver.findElement(By.xpath("//*[@id=\"loginbutton\"]")).click();
+//        System.out.println(js.executeScript("return document.documentElement.outerHTML"));
+
+//        GlobalVariable.usernameWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"email\"]")));
+//        GlobalVariable.driver.findElement(By.xpath("//*[@id=\"u_0_6\"]/div/button")).click();
+        GlobalVariable.driver.findElement(By.id("email")).sendKeys("danvalnicek@gmail.com");
+        GlobalVariable.driver.findElement(By.id("pass")).sendKeys(messPass);
+        GlobalVariable.driver.findElement(By.id("loginbutton")).click();
 //        finding channel
 //        GlobalVariable.driver.findElement(By.xpath("//*[@id=\"row_header_id_thread:2124606510942985\"]/a/div/div[2]")).click();
         GlobalVariable.driver.findElement(By.xpath("//*[@id=\"row_header_id_thread:2352986854724121\"]/a/div/div[2]")).click();
 //        TODO: live reload
 
         Boolean True = true;
-        JavascriptExecutor js = (JavascriptExecutor) GlobalVariable.driver;
+
 //        js event listener
         js.executeScript("console.log('start')");
         System.out.println("start");
-        js.executeScript("newMessage = false;");
-        js.executeScript(" document.querySelector('#js_1').addEventListener('DOMSubtreeModified', ()=>{newMessage=true})");
+        boolean ready = false;
+        while (!ready) {
+            try {
+                js.executeScript("newMessage = false;");
+                js.executeScript(" document.querySelector('#js_1').addEventListener('DOMSubtreeModified', ()=>{newMessage=true})");
+                ready = true;
+            } catch (Exception e) {
+                ready = false;
+            }
+        }
         System.out.println("1");
-        //                        "document.querySelector(\"#js_1\").addEventListener('DOMSubtreeModified', ()=>{newMessage=true})");
-//      Object newMsg = js.executeScript("return newMessage");
         js.executeScript("console.log('1')");
         while (True) {
-
             Object newM = js.executeScript("return newMessage");
-            System.out.println(newM.getClass());
+            boolean val = Boolean.parseBoolean(String.valueOf(newM));
+            if (val) {
+                Scrapper.lastMessage();
 
+                js.executeScript("newMessage = false;");
+            } else
+                System.out.println("nothing happens");
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException ex) {
                 // Stop immediately and go home
             }
         }
-        Object newM = js.executeScript("newMessage");
-        List<WebElement> message = GlobalVariable.driver.findElements(By.className("clearfix"));
-        WebElement lastMessage = message.get(message.size() - 1);
-        if (newM == "True") ;
+
 
 //        }
 
@@ -85,7 +104,6 @@ public class Main extends Scrapper {
 //            System.out.println("No X");
 //        }
 
-        System.out.println("title of the page is: " + GlobalVariable.driver.getCurrentUrl());
 
 //        GlobalVariable.driver.findElement(By.xpath("//input[@autocomplete='off']")).sendKeys("Nela");
 //        GlobalVariable.driver.findElement(By.xpath("//input[text()='Nela Valnickova']")).click();
