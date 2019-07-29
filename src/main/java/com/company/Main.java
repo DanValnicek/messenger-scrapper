@@ -2,13 +2,16 @@ package com.company;
 
 import main.java.com.company.GlobalVariable;
 import main.java.com.company.Scrapper;
+import main.java.com.company.Time;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 
 import java.util.concurrent.TimeUnit;
 
-public class Main extends Scrapper {
-    public static void main(String[] args) {
+public abstract class Main extends Scrapper implements Runnable {
+
+    public static void main(String[] args) throws Exception {
+
         String messPass = System.getenv("messPass");
 //      system path to chromedriver
         System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver.exe");
@@ -24,15 +27,15 @@ public class Main extends Scrapper {
 
         System.out.println("title of the page is: " + GlobalVariable.driver.getCurrentUrl());
 
-//        System.out.println(js.executeScript("return document.documentElement.outerHTML"));
+//                            System.out.println(js.executeScript("return document.documentElement.outerHTML"));
 
-//        logging to messenger
+//                            logging to messenger
         GlobalVariable.driver.findElement(By.id("email")).sendKeys("danvalnicek@gmail.com");
         GlobalVariable.driver.findElement(By.id("pass")).sendKeys(messPass);
-        GlobalVariable.driver.findElement(By.id("loginbutton")).click();
-//        accessing channel
+        GlobalVariable.driver.findElement(By.xpath("//*[@id='loginbutton']")).click();
+//                                            accessing channel
         GlobalVariable.driver.findElement(By.xpath("//*[@id=\"row_header_id_thread:2352986854724121\"]/a/div/div[2]")).click();
-//        js event listener
+//                                                js event listener
         js.executeScript("console.log('trying to implement event listener to page')");
         System.out.println("trying to implement event listener to page");
         boolean ready = false;
@@ -49,18 +52,25 @@ public class Main extends Scrapper {
         js.executeScript("console.log('event listener is implemented')");
 
 //        Live reload
+//        ThreadText threadText = new ThreadText();
+//        ThreadFile threadFile = new ThreadFile();
+//        ThreadImg threadImg = new ThreadImg();
         Boolean True = true;
         while (True) {
             Object newM = js.executeScript("return newMessage");
             boolean val = Boolean.parseBoolean(String.valueOf(newM));
             if (val) {
-                Scrapper.lastMessage();
+                name = Scrapper.nameReturn();
+                lastFind = Scrapper.lastMessage();
+                Scrapper.asyncText();
+                Scrapper.asyncImg();
+                Scrapper.asyncFile();
 
                 js.executeScript("newMessage = false;");
             } else {
-                System.out.println("nothing happens");
+                Time.time();
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException ex) {
                     System.out.println("Stop immediately and go home");
                 }
