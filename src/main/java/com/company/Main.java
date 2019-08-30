@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 
 import java.util.concurrent.TimeUnit;
 
+
 public abstract class Main extends Scrapper implements Runnable {
 
     public static void main(String[] args) throws Exception {
@@ -23,18 +24,20 @@ public abstract class Main extends Scrapper implements Runnable {
         GlobalVariable.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         GlobalVariable.driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 //      finding URL
-        GlobalVariable.driver.get("https://www.messenger.com/");
+//        GlobalVariable.driver.get("https://www.messenger.com/");
+        GlobalVariable.driver.get("https://m.facebook.com/messages/");
 
         System.out.println("title of the page is: " + GlobalVariable.driver.getCurrentUrl());
 
 //                            System.out.println(js.executeScript("return document.documentElement.outerHTML"));
 
 //                            logging to messenger
-        GlobalVariable.driver.findElement(By.id("email")).sendKeys("danvalnicek@gmail.com");
-        GlobalVariable.driver.findElement(By.id("pass")).sendKeys(messPass);
-        GlobalVariable.driver.findElement(By.xpath("//*[@id='loginbutton']")).click();
+        GlobalVariable.driver.findElement(By.id("m_login_email")).sendKeys("danvalnicek@gmail.com");
+        GlobalVariable.driver.findElement(By.id("m_login_password")).sendKeys(messPass);
+        GlobalVariable.driver.findElement(By.xpath("//*[@id=\"u_0_5\"]")).click();
 //                                            accessing channel
-        GlobalVariable.driver.findElement(By.xpath("//*[@id=\"row_header_id_thread:2352986854724121\"]/a/div/div[2]")).click();
+        GlobalVariable.driver.findElement(By.xpath("//*[@id=\"threadlist_row_thread_fbid_2352986854724121\"]/div[4]/div/a")).click();
+//        GlobalVariable.driver.findElement(By.xpath("//*[@id=\"threadlist_row_thread_fbid_2124606510942985\"]/div[4]/div/a")).click();
 //                                                js event listener
         js.executeScript("console.log('trying to implement event listener to page')");
         System.out.println("trying to implement event listener to page");
@@ -42,7 +45,7 @@ public abstract class Main extends Scrapper implements Runnable {
         while (!ready) {
             try {
                 js.executeScript("newMessage = false;");
-                js.executeScript(" document.querySelector('#js_1').addEventListener('DOMSubtreeModified', ()=>{newMessage=true})");
+                js.executeScript(" document.querySelector('#messageGroup').addEventListener('DOMSubtreeModified', ()=>{newMessage=true})");
                 ready = true;
             } catch (Exception e) {
                 ready = false;
@@ -52,16 +55,14 @@ public abstract class Main extends Scrapper implements Runnable {
         js.executeScript("console.log('event listener is implemented')");
 
 //        Live reload
-//        ThreadText threadText = new ThreadText();
-//        ThreadFile threadFile = new ThreadFile();
-//        ThreadImg threadImg = new ThreadImg();
         Boolean True = true;
         while (True) {
             Object newM = js.executeScript("return newMessage");
             boolean val = Boolean.parseBoolean(String.valueOf(newM));
             if (val) {
-                name = Scrapper.nameReturn();
                 lastFind = Scrapper.lastMessage();
+                name = Scrapper.nameReturn();
+//                timeSend = Time.minutes();
                 Scrapper.asyncText();
                 Scrapper.asyncImg();
                 Scrapper.asyncFile();

@@ -14,19 +14,22 @@ public class Scrapper {
     public static volatile String name;
     public static volatile WebElement lastFind;
     public static volatile String finMsg;
-    public static volatile String atachment;
+    public static volatile String attachment;
 
     public static String nameReturn() {
         GlobalVariable.driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
-        List<WebElement> nameSrape = GlobalVariable.driver.findElements(By.className("_ih3"));
-        WebElement lastName = nameSrape.get(nameSrape.size() - 1);
-        String name = lastName.getText();
+        String nameFind = lastFind.findElement(By.cssSelector(".darkTouch.l")).getAttribute("href");
+        String[] nameFind1 = nameFind.split("/");
+        String nameFind2 = nameFind1[3];
+        String[] nameFind3 = nameFind2.split("\\W+");
+        String name = nameFind3[1].substring(0,1).toUpperCase() + nameFind3[1].substring(1);
+
         return name;
     }
 
     public static WebElement lastMessage() {
 //        finding last message
-        List<WebElement> find = GlobalVariable.driver.findElements(By.cssSelector(".clearfix ._o46"));
+        List<WebElement> find = GlobalVariable.driver.findElements(By.cssSelector(".voice.acw"));
         WebElement lastFind = find.get(find.size() - 1);
         return lastFind;
     }
