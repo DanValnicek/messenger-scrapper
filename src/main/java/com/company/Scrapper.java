@@ -1,7 +1,6 @@
 package main.java.com.company;
 
 
-import main.TextScrape;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -33,7 +32,6 @@ public class Scrapper {
         WebElement lastFind = find.get(find.size() - 1);
         return lastFind;
     }
-
     public static void asyncText() throws Exception {
         final CompletableFuture<String> textAsync = CompletableFuture.supplyAsync(() ->
                 TextScrape.textScrape(lastFind, name));

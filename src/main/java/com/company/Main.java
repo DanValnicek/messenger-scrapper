@@ -1,8 +1,5 @@
-package com.company;
+package main.java.com.company;
 
-import main.java.com.company.GlobalVariable;
-import main.java.com.company.Scrapper;
-import main.java.com.company.Time;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 
@@ -13,7 +10,6 @@ public abstract class Main extends Scrapper implements Runnable {
 
     public static void main(String[] args) throws Exception {
 
-        String messPass = System.getenv("messPass");
 //      system path to chromedriver
         System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver.exe");
 
@@ -33,7 +29,7 @@ public abstract class Main extends Scrapper implements Runnable {
 
 //                            logging to messenger
         GlobalVariable.driver.findElement(By.id("m_login_email")).sendKeys("danvalnicek@gmail.com");
-        GlobalVariable.driver.findElement(By.id("m_login_password")).sendKeys(messPass);
+        GlobalVariable.driver.findElement(By.id("m_login_password")).sendKeys(System.getenv("messPass"));
         GlobalVariable.driver.findElement(By.xpath("//*[@id=\"u_0_5\"]")).click();
 //                                            accessing channel
         GlobalVariable.driver.findElement(By.xpath("//*[@id=\"threadlist_row_thread_fbid_2352986854724121\"]/div[4]/div/a")).click();
@@ -60,13 +56,14 @@ public abstract class Main extends Scrapper implements Runnable {
             Object newM = js.executeScript("return newMessage");
             boolean val = Boolean.parseBoolean(String.valueOf(newM));
             if (val) {
+
                 lastFind = Scrapper.lastMessage();
                 name = Scrapper.nameReturn();
-//                timeSend = Time.minutes();
                 Scrapper.asyncText();
+//                ImgScrape.imgScrape(lastFind,name);
                 Scrapper.asyncImg();
+//                FileScrape.fileScrape(lastFind, name);
                 Scrapper.asyncFile();
-
                 js.executeScript("newMessage = false;");
             } else {
                 Time.time();

@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a773aed-6de9-41bd-811d-3a27b43554b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/TextScrape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8a773aed-6de9-41bd-811d-3a27b43554b8" name="Default Changelist" comment="everything works exept video">
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/com/company/ImgScrape.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraping.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WebScraping/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WebScraping/main/java/com/company/GlobalVariable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WebScraping/main/java/com/company/Scrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/TextScrape.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/FileScrape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/FileScrape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/ImgScrape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/ImgScrape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Scrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Scrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/TextScrape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/TextScrape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/TextScrape.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/TextScrape.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +84,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.capture" />
     <property name="settings.editor.splitter.proportion" value="0.25" />
   </component>
   <component name="RecentsManager">
@@ -204,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564427456437</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="changed site that we use to scrape from messenger.com to m.facebook.com">
+      <created>1567177177019</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1567177177019</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -232,6 +232,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first" />
     <MESSAGE value="second" />
     <MESSAGE value="working as it should." />
@@ -239,7 +240,9 @@
     <MESSAGE value="trying out code factor" />
     <MESSAGE value="cleaning the code" />
     <MESSAGE value="added async" />
-    <option name="LAST_COMMIT_MESSAGE" value="added async" />
+    <MESSAGE value="changed site that we use to scrape from messenger.com to m.facebook.com" />
+    <MESSAGE value="everything works exept video" />
+    <option name="LAST_COMMIT_MESSAGE" value="everything works exept video" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -247,7 +250,7 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
+        <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/company/Scrapper.java</url>
           <line>18</line>
           <properties class="main.java.com.company.Scrapper" method="nameReturn">
@@ -255,7 +258,7 @@
           </properties>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
+        <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/company/Scrapper.java</url>
           <line>29</line>
           <properties class="main.java.com.company.Scrapper" method="lastMessage">
@@ -263,24 +266,28 @@
           </properties>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/company/Main.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+        <line-breakpoint suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/company/Scrapper.java</url>
           <line>33</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/Main.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/FileScrape.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
       </breakpoints>
-      <breakpoints-defaults>
-        <breakpoint suspend="THREAD" type="java-line" />
-      </breakpoints-defaults>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="lastFind" language="JAVA" />
+        <watch expression="duplCheck" language="JAVA" />
+        <watch expression="attachment" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -290,20 +297,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WebScraping$Main.ic" NAME="Main Coverage Results" MODIFIED="1562256515278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="watch">
-      <expression>
-        <expression-string>lastFind</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>msgSent</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
   </component>
   <component name="mavenExecuteGoalHistory">
     <option value="" />
